@@ -27,6 +27,12 @@ jobs:
           npm run build --if-present
           npm run test --if-present
 
+      - name: Install and build Vue.js project
+        run: |
+          npm install
+          npm run build
+        working-directory: ./web-ui/
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
