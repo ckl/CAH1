@@ -9,11 +9,21 @@
 import { defineComponent } from "vue"
 import HelloWorld from "./components/HelloWorld.vue"
 
+import io from 'socket.io-client';
+
 export default defineComponent({
 	name: "App",
+	data() {
+		return { 
+			socket: io('http://localhost:3000/')
+		}
+	},
 	components: {
 		HelloWorld,
 	},
+	mounted() {
+		this.socket.emit('connection')
+	}
 })
 </script>
 

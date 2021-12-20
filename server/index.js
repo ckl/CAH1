@@ -1,10 +1,10 @@
 const express = require('express')
 const app = express(),
 	  bodyParser = require("body-parser"),
-	  const http = require('http'),
-	  const server = http.createServer(app)
-	  const { Server } = require("socket.io")
-	  const io = new Server(server);
+	  http = require('http'),
+	  server = http.createServer(app),
+	  { Server } = require("socket.io"),
+	  io = new Server(server);
 const port = process.env.PORT || 3000
 
 app.use(bodyParser.json());
@@ -20,8 +20,10 @@ app.get('/api/users', (req, res) => {
 	res.send('users api called');
   });
 
-io.on('connection', (socket) => {  console.log('a user connected');});
+io.on('connection', (socket) => {  
+	console.log('a user connected')
+});
 
-app.listen(port, () => {
+server.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
