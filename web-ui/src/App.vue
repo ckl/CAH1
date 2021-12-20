@@ -22,6 +22,9 @@ export default defineComponent({
 		HelloWorld,
 	},
 	mounted() {
+		this.socket.on('RESPONSE_MSG', (data) => {
+			console.log(data)
+		})
 		this.socket.emit('connection')
 	}
 })

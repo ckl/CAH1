@@ -22,6 +22,7 @@ app.get('/api/users', (req, res) => {
 
 io.on('connection', (socket) => {  
 	console.log('a user connected')
+	io.emit('RESPONSE_MSG', 'I see you there')
 });
 
 server.listen(port, () => {
