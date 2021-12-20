@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon ./index.js localhost 3080"
+    "start": "node server/index.js",
+    "dev": "nodemon ./server/index.js localhost 3080"
   },
   "author": "",
   "license": "ISC",
