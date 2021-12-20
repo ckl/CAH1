@@ -1,4 +1,8 @@
 {
 	"appService.defaultWebAppToDeploy": "/subscriptions/2ea911e0-d413-40e5-9d5d-8f19c716609e/resourceGroups/learning-resource-group/providers/Microsoft.Web/sites/CAH1",
-	"appService.deploySubpath": "."
+	"appService.deploySubpath": ".",
+	"appService.zipIgnorePattern": [
+		"node_modules{,/**}",
+		".vscode{,/**}"
+	]
 }
