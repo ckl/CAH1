@@ -1,2 +1,2 @@
 [config]
-project = web-ui/
+command = bash deploy.sh
